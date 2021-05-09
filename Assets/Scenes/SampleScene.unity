@@ -2699,7 +2699,7 @@ GameObject:
   - component: {fileID: 987876279}
   - component: {fileID: 987876275}
   m_Layer: 0
-  m_Name: Player
+  m_Name: BraynDummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2718,7 +2718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 2
-  jumpForce: 3
+  jumpForce: 5
 --- !u!212 &987876276
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -2804,7 +2804,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &987876279
 BoxCollider2D:
   m_ObjectHideFlags: 0

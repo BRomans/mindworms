@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterController2D : MonoBehaviour
+public class BraynCharacterController : MonoBehaviour
 {
     public float movementSpeed = 1;
     public float jumpForce = 1;
