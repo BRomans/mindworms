@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour {
     private Camera cam;
-    public float minZoom = -1f;
-    public float maxZoom = -5f;
+    public float minZoom = -10f;
+    public float maxZoom = -30f;
     public float zoomSpeed = 0.1f;
     public float mouseSpeed = 1; //TODO: lookAroundSpeed? It controls the speed with which the camera looks around when you move the mouse while right-clicking
     // Start is called before the first frame update
@@ -34,7 +34,7 @@ public class CameraController : MonoBehaviour {
     }
 
     private void resetPosition() {
-        transform.localPosition = Vector3.zero + Vector3.back * 3;
+        transform.localPosition = Vector3.zero + Vector3.forward * maxZoom;
     }
 
     public void focusBrayn(Brayn braynToFocus) {

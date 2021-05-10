@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 8640823789191042026}
   - component: {fileID: 2645383260935094272}
   - component: {fileID: 4395456843036049605}
-  - component: {fileID: 6505766342498818805}
+  - component: {fileID: 7737330948975759875}
   m_Layer: 0
   m_Name: Brayn
   m_TagString: Untagged
@@ -110,7 +110,7 @@ Transform:
   m_GameObject: {fileID: 6746275660546875210}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 3284180654489194493}
   m_Father: {fileID: 0}
@@ -128,9 +128,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6646057e478dca749ae9ff0cbc25e094, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  braynId: 0
-  teamId: 0
-  movementSpeed: 1
+  BraynId: 0
+  TeamId: 0
+  MovementSpeed: 1
+  CurrentWeapon: {fileID: 0}
   health: {fileID: 0}
 --- !u!212 &6746275660546875215
 SpriteRenderer:
@@ -172,7 +173,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 105630858582766499d24629d0191618, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -232,8 +233,8 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.1
---- !u!114 &6505766342498818805
+  m_Radius: 0.5
+--- !u!114 &7737330948975759875
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -245,3 +246,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7847242ee9cf17441b9ae09159538afb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 1
+  jumpSpeed: 0.2
