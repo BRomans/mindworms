@@ -53,7 +53,77 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6746275660546875210, guid: 3fbfb8a6ca9cbe54283d10aa1e9314bb, type: 3}
       propertyPath: m_Name
-      value: Brayn
+      value: Brayn Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737330948975759875, guid: 3fbfb8a6ca9cbe54283d10aa1e9314bb, type: 3}
+      propertyPath: speed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 7737330948975759875, guid: 3fbfb8a6ca9cbe54283d10aa1e9314bb, type: 3}
+      propertyPath: jumpSpeed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3fbfb8a6ca9cbe54283d10aa1e9314bb, type: 3}
+--- !u!4 &6830538566559359025 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6746275660546875209, guid: 3fbfb8a6ca9cbe54283d10aa1e9314bb, type: 3}
+  m_PrefabInstance: {fileID: 240211794526928760}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7917842350240345036
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6830538566559359025}
+    m_Modifications:
+    - target: {fileID: 1503530171205484080, guid: 71fca143e7e3f3a4ab39d7d90c47dfcc, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503530171205484080, guid: 71fca143e7e3f3a4ab39d7d90c47dfcc, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -2.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503530171205484080, guid: 71fca143e7e3f3a4ab39d7d90c47dfcc, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503530171205484080, guid: 71fca143e7e3f3a4ab39d7d90c47dfcc, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503530171205484080, guid: 71fca143e7e3f3a4ab39d7d90c47dfcc, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503530171205484080, guid: 71fca143e7e3f3a4ab39d7d90c47dfcc, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503530171205484080, guid: 71fca143e7e3f3a4ab39d7d90c47dfcc, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503530171205484080, guid: 71fca143e7e3f3a4ab39d7d90c47dfcc, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503530171205484080, guid: 71fca143e7e3f3a4ab39d7d90c47dfcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503530171205484080, guid: 71fca143e7e3f3a4ab39d7d90c47dfcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1503530171205484080, guid: 71fca143e7e3f3a4ab39d7d90c47dfcc, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5865228126834726049, guid: 71fca143e7e3f3a4ab39d7d90c47dfcc, type: 3}
+      propertyPath: m_Name
+      value: Mind Blast
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 71fca143e7e3f3a4ab39d7d90c47dfcc, type: 3}

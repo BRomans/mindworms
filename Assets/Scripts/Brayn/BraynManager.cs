@@ -30,7 +30,9 @@ public class BraynManager : MonoBehaviour {
     }
 
     public void Update() {
-
+        if(Input.GetKeyDown(KeyCode.P)) {
+            NextBrayn();
+        }
     }
 
     private void setCamera() {
@@ -40,15 +42,25 @@ public class BraynManager : MonoBehaviour {
 
     private bool spawnBrayns(int braynsPerTeam, int teams) {
         Debug.Log("Spawning Brayns");
-        spawnBrayn(currentBrayn, 0); //TEMP
+        for(int iTBaynsPerTeam = 1; iTBaynsPerTeam <= braynsPerTeam; iTBaynsPerTeam++) { //starting at 1 each as input from Inspector starts at 1 for human convenience
+            for(int iTeams = 1; iTeams <= teams; iTeams++) {
+                spawnBrayn(currentBrayn, iTeams);
+                Debug.Log("iteams " + iTeams);
+                currentBrayn++;
+            }
+        }
+
+        //spawnBrayn(currentBrayn, 0); //TEMP
+        //spawnBrayn(currentBrayn+1, 1); //TEMP
         return true; //TEMP
     }
 
     private bool spawnBrayn(int id, int team) {
         Debug.Log("Spawning a Brayn for team " + team);
-        Vector3 spawnPosition = new Vector3(5, 10);
+        Vector3 spawnPosition = (team == 1) ? new Vector3(5, 10) : new Vector3(-30, 15);
         Brayn tBrayn = Instantiate(braynPrefab, spawnPosition, Quaternion.identity).GetComponent<Brayn>();
         tBrayn.BraynId = id;
+        tBrayn.TeamId = team;
         Debug.Log("sB, Spawned " + tBrayn);
         brayns.Add(tBrayn);
         return true; //TEMP
