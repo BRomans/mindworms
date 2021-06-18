@@ -4,7 +4,7 @@ public class CameraController : MonoBehaviour {
     private Camera cam;
     public float minZoom = -10f;
     public float maxZoom = -30f;
-    public float zoomSpeed = 0.1f;
+    public float zoomSpeed = 2f;
     public float mouseSpeed = 1; //TODO: lookAroundSpeed? It controls the speed with which the camera looks around when you move the mouse while right-clicking
     // Start is called before the first frame update
     void Start() {

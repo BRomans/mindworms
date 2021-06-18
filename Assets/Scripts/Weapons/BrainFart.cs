@@ -6,7 +6,11 @@ public class BrainFart : Weapon {
     void Start() {
         Debug.Log("Brain Fart equiped");
     }
-    protected override void fireWeapon() {
+    protected override void FireWeapon() {
+        throw new System.NotImplementedException();
+    }
+
+    protected override void Aim() {
         throw new System.NotImplementedException();
     }
 }
