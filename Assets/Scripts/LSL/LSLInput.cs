@@ -2,13 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using LSL;
+using static LSL.LSL;
 
 public class LSLInput : MonoBehaviour
 {
     public string StreamType = "EEG";
     public float scaleInput = 0.1f;
-    liblsl.StreamInfo[] streamInfos;
-    liblsl.StreamInlet streamInlet;
+    LSL.StreamInfo[] streamInfos;
+    LSL.StreamInlet streamInlet;
     float[] sample;
     private int channelCount = 0;
 
@@ -16,10 +17,10 @@ public class LSLInput : MonoBehaviour
     {
         if (streamInlet == null)
         {
-            streamInfos = liblsl.resolve_stream("type", StreamType, 1, 0.0);
+            streamInfos = resolve_stream("type", StreamType, 1, 0.0);
             if (streamInfos.Length > 0)
             {
-                streamInlet = new liblsl.StreamInlet(streamInfos[0]);
+                streamInlet = new LSL.StreamInlet(streamInfos[0]);
                 channelCount = streamInlet.info().channel_count();
                 streamInlet.open_stream();
             }
@@ -45,3 +46,4 @@ public class LSLInput : MonoBehaviour
         gameObject.transform.position = gameObject.transform.position + inputVelocity;
     }
 }
+
