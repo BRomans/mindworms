@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 479288449}
   - component: {fileID: 479288450}
   - component: {fileID: 479288451}
+  - component: {fileID: 479288452}
   m_Layer: 0
   m_Name: Test Level Manager
   m_TagString: Untagged
@@ -168,7 +169,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   randomTerrain: 0
-  terrain: {fileID: 6134465663388035535, guid: 038e89e1a532430489914edd9ca07149, type: 3}
+  terrain: {fileID: 2713214813146766438, guid: c63f30d401088504896dd6c609d89cd8, type: 3}
 --- !u!114 &479288451
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,10 +182,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36aa502b9cff6f4489deb588128473dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  braynPrefab: {fileID: 6746275660546875210, guid: 3fbfb8a6ca9cbe54283d10aa1e9314bb, type: 3}
+  braynPrefab: {fileID: 6830538566559359026, guid: 51967894cbdcc42438412340a1aee78f, type: 3}
   MainCamera: {fileID: 0}
   BraynsPerTeam: 1
   Teams: 2
+--- !u!114 &479288452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 479288448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19597872a516924439e63955b3946fc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  listenPort: 1042
+  returnBytes: 
 --- !u!1 &1438936863
 GameObject:
   m_ObjectHideFlags: 0

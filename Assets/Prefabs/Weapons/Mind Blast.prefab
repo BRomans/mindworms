@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30a8db318cfb2ef4a85bff3235ef4e87, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TargetRectanglePrefab: {fileID: 8321722615467515399, guid: 6da69efc0208b104dade221331407cfe, type: 3}
 --- !u!1001 &7067299489356197674
 PrefabInstance:
   m_ObjectHideFlags: 0
