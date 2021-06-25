@@ -36,7 +36,13 @@ public class UDP_receiver : MonoBehaviour
             {
                 // read the data by the main thread
                 /*byte[]*/ returnBytes = _receiveQueue.Dequeue();
-                //Debug.Log($" {Encoding.ASCII.GetString(returnBytes, 0, returnBytes.Length)}");
+                String tempString = Encoding.ASCII.GetString(returnBytes, 0, returnBytes.Length);
+                String[] splitString = tempString.Split(' ');
+                Debug.Log(splitString[0]);
+                Debug.Log(splitString[1]);
+                splitString[1] = splitString[1].Replace('.', ',');
+                Debug.Log(Double.Parse(splitString[1], System.Globalization.NumberStyles.Float));
+                //Debug.Log(float.Parse(splitString[1].Substring(0,splitString[1].Length - 5)));
             }
         }
     }
