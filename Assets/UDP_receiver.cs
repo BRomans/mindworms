@@ -17,6 +17,9 @@ public class UDP_receiver : MonoBehaviour
 
     public byte[] returnBytes;
 
+    public Double betaSignal;
+    public Double smrSignal;
+
     public Queue<byte[]> _receiveQueue = new Queue<byte[]>();
     private System.Object _receiveQueueLock = new System.Object();
 
@@ -38,10 +41,15 @@ public class UDP_receiver : MonoBehaviour
                 /*byte[]*/ returnBytes = _receiveQueue.Dequeue();
                 String tempString = Encoding.ASCII.GetString(returnBytes, 0, returnBytes.Length);
                 String[] splitString = tempString.Split(' ');
-                Debug.Log(splitString[0]);
-                Debug.Log(splitString[1]);
+                //Debug.Log(splitString[0]);
+                //Debug.Log(splitString[1]);
+                splitString[0] = splitString[0].Replace('.', ',');
                 splitString[1] = splitString[1].Replace('.', ',');
-                Debug.Log(Double.Parse(splitString[1], System.Globalization.NumberStyles.Float));
+                betaSignal = Double.Parse(splitString[0], System.Globalization.NumberStyles.Float);
+                smrSignal = Double.Parse(splitString[1], System.Globalization.NumberStyles.Float);
+                //Debug.Log("beta" + betaSignal);
+                //Debug.Log("smr" + smrSignal);
+
                 //Debug.Log(float.Parse(splitString[1].Substring(0,splitString[1].Length - 5)));
             }
         }

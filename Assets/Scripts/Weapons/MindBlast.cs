@@ -34,12 +34,15 @@ public class MindBlast : Weapon {
     private void Update() {
         base.Update();
         updateTargetRectangle();
+
+        //Debug.Log("beta" + BraynManager.Singleton.udpReceiver.betaSignal);
+        Debug.Log("smr" + BraynManager.Singleton.udpReceiver.smrSignal);
     }
 
     private void updateTargetRectangle() {
         if (stage == 1) {
 
-            targetRectangle.transform.localScale = new Vector3(oscilationOffset + Mathf.Sin(Time.time) * oscilationRange, oscilationOffset + Mathf.Sin(Time.time) * oscilationRange, 1);
+            targetRectangle.transform.localScale = new Vector3(oscilationOffset + (float)BraynManager.Singleton.udpReceiver.smrSignal * oscilationRange, oscilationOffset + (float)BraynManager.Singleton.udpReceiver.smrSignal * oscilationRange, 1);
         }
     }
 

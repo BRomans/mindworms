@@ -2,7 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(UDP_receiver))]
 public class BraynManager : MonoBehaviour {
+    public UDP_receiver udpReceiver;
+
     private List<Brayn> brayns = new List<Brayn>();
     [SerializeField] private GameObject braynPrefab;
     public Camera MainCamera;
@@ -22,6 +25,9 @@ public class BraynManager : MonoBehaviour {
             return;
         }
         Singleton = this;
+
+        udpReceiver = GetComponent<UDP_receiver>();
+        udpReceiver.listenPort = 1048;
 
         setCamera();
 
@@ -59,6 +65,7 @@ public class BraynManager : MonoBehaviour {
         Debug.Log("Spawning a Brayn for team " + team);
         Vector3 spawnPosition = (team == 1) ? new Vector3(5, 10) : new Vector3(-30, 15);
         Brayn tBrayn = Instantiate(braynPrefab, spawnPosition, Quaternion.identity).GetComponent<Brayn>();
+        //tBrayn.transform.parent = 
         tBrayn.BraynId = id;
         tBrayn.TeamId = team;
         Debug.Log("sB, Spawned " + tBrayn);

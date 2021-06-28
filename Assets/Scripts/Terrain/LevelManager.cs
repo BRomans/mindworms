@@ -8,8 +8,10 @@ public class LevelManager : MonoBehaviour {
     public GameObject terrain;
     
     private BraynManager braynManager;
+    
     protected virtual void Start() {
         braynManager = GetComponent<BraynManager>();
+        
         verifyCamera();
         verifyTerrain();
     }
